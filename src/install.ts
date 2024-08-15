@@ -76,7 +76,7 @@ async function pipInstall(pipPath: string, workPath: string, args: string[]) {
   const pretty = `${pipPath} ${cmdArgs.join(' ')}`;
   debug(`Running "${pretty}"...`);
   try {
-    await execa(pipPath, cmdArgs, {
+    await execa('pip', cmdArgs, {
       cwd: workPath,
     });
   } catch (err) {
