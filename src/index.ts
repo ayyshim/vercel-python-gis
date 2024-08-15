@@ -60,6 +60,9 @@ export const build = async ({
   meta = {},
   config,
 }: BuildOptions) => {
+
+  console.log("Starting build ===========")
+
   let pythonVersion = getLatestPythonVersion(meta);
 
   workPath = await downloadFilesInWorkPath({
